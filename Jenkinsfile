@@ -38,7 +38,7 @@
              sh"zip -r nopcommerce-${BUILD_ID}.zip ${WORKSPACE}/app/published"
              sh'''
              mkdir test
-             cp ${WORKSPACE}/app/published/ ${WORKSPACE}/test
+             cp -R ${WORKSPACE}/app/published/ ${WORKSPACE}/test
               '''
              sh'cd ${WORKSPACE}/test && mkdir bin && mkdir logs && chmod 775 App_Data/ && chmod 775 App_Data/DataProtectionKeys && chmod 775 bin && chmod 775 logs && chmod 775 Plugins && chmod 775 wwwroot/bundles && chmod 775 wwwroot/db_backups && chmod 775 wwwroot/files/exportimport && chmod 775 wwwroot/icons && chmod 775 wwwroot/images && chmod 775 wwwroot/images/thumbs && chmod 775 wwwroot/images/uploaded/'
              sh "cp entrypoint.sh ${WORKSPACE}/test/ && ./entrypoint.sh"  
