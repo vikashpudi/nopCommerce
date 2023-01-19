@@ -29,7 +29,7 @@
              sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Tax.FixedOrByCountryStateZip && dotnet build Nop.Plugin.Tax.FixedOrByCountryStateZip.csproj -c Release '
              sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Widgets.AccessiBe && dotnet build Nop.Plugin.Widgets.AccessiBe.csproj -c Release'
              sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Widgets.FacebookPixel && dotnet build Nop.Plugin.Widgets.FacebookPixel.csproj -c Release'
-             sh'cd ${WORKSPACE}src/Plugins/Nop.Plugin.Widgets.GoogleAnalytics && dotnet build Nop.Plugin.Widgets.GoogleAnalytics.csproj -c Release'
+             sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Widgets.GoogleAnalytics && dotnet build Nop.Plugin.Widgets.GoogleAnalytics.csproj -c Release'
              sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Widgets.NivoSlider && dotnet build Nop.Plugin.Widgets.NivoSlider.csproj -c Release'
              sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Widgets.What3words && dotnet build Nop.Plugin.Widgets.What3words.csproj -c Release'
              // publishing project
