@@ -33,7 +33,7 @@
              sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Widgets.NivoSlider && dotnet build Nop.Plugin.Widgets.NivoSlider.csproj -c Release'
              sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Widgets.What3words && dotnet build Nop.Plugin.Widgets.What3words.csproj -c Release'
              // publishing project
-             sh'cd ${WORKSPACE}/src/Presentation/Nop.Web && dotnet publish Nop.Web.csproj -c Release -o /app/published'
+             sh'cd ${WORKSPACE}/src/Presentation/Nop.Web && dotnet publish Nop.Web.csproj -c Release -o ${WORKSPACE}/app/published'
               
              //66 lines completed
 
