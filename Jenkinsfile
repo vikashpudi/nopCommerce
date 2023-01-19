@@ -6,7 +6,7 @@
                  choice(name: 'branch_to_build', choices: ['main', 'dev', 'ppm'], description: 'choose build')
                 }
     stages {
-        stage ('vcs') {
+        stage ('building the projrct') {
             steps {
              sh'ls && pwd'
              sh" cd src && dotnet restore NopCommerce.sln"
@@ -34,10 +34,7 @@
              sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Widgets.What3words && dotnet build Nop.Plugin.Widgets.What3words.csproj -c Release'
              // publishing project
              sh'cd ${WORKSPACE}/src/Presentation/Nop.Web && dotnet publish Nop.Web.csproj -c Release -o /app/published'
-             sh'''
-             cd ${WORKSPACE}/app/published && mkdir logs && mkdir bin 
-
-             '''
+              
              //66 lines completed
 
             }
