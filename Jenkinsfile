@@ -34,7 +34,7 @@
              sh'cd ${WORKSPACE}/src/Plugins/Nop.Plugin.Widgets.What3words && dotnet build Nop.Plugin.Widgets.What3words.csproj -c Release'
              // publishing project
              sh'cd ${WORKSPACE}/src/Presentation/Nop.Web && dotnet publish Nop.Web.csproj -c Release -o ${WORKSPACE}/app/published'
-             sh'sudo apt install zip'
+             sh'sudo apt install zip -y'
              sh"zip -r nopcommerce-${BUILD_ID}.zip ${WORKSPACE}/app/published"
              sh'''
              mkdir test
