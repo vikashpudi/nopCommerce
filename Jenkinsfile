@@ -8,6 +8,7 @@
     stages {
         stage ('vcs') {
             steps {
+             sh'ls && pwd'
              sh 'dotnet restore NopCommerce.sln'
              sh 'cd /src/Presentation/Nop.Web && dotnet build Nop.Web.csproj -c Release'
              sh'cd /src/Plugins/Nop.Plugin.DiscountRules.CustomerRoles && dotnet build Nop.Plugin.DiscountRules.CustomerRoles.csproj -c Release'
