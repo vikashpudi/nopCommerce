@@ -9,8 +9,8 @@
         stage ('vcs') {
             steps {
              sh'ls && pwd'
-             sh ' cd src && dotnet restore NopCommerce.sln'
-             sh 'cd /src/Presentation/Nop.Web && dotnet build Nop.Web.csproj -c Release'
+             sh' cd src && dotnet restore NopCommerce.sln'
+             sh'cd src/Presentation/Nop.Web && dotnet build Nop.Web.csproj -c Release'
              sh'cd /src/Plugins/Nop.Plugin.DiscountRules.CustomerRoles && dotnet build Nop.Plugin.DiscountRules.CustomerRoles.csproj -c Release'
              sh'cd /src/Plugins/Nop.Plugin.ExchangeRate.EcbExchange && dotnet build Nop.Plugin.ExchangeRate.EcbExchange.csproj -c Release'
              sh'cd /src/Plugins/Nop.Plugin.ExternalAuth.Facebook && dotnet build Nop.Plugin.ExternalAuth.Facebook.csproj -c Release'
